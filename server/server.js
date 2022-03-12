@@ -1,23 +1,22 @@
 const express = require('express');
-const http = require('http');
 const path = require('path');
-const { Server } = require("socket.io");
 const mongoose = require('mongoose');
+const NoteSocket = require('./src/socket');
+const config = require('./src/config');
 
 const app = express();
-const server = http.createServer(app);
-const io = new Server(server);
 
-mongoose.connect('mongodb://localhost:27017/wyden-notes');
+mongoose.connect(config.DATABASE.URL + config.DATABASE.NAME)
+  .then(() => {
 
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'index.html'));
-});
+    app.get('/', (req, res) => {
+      res.sendFile(path.resolve(__dirname, '..', 'index.html'));
+    });
+    
+    const server = NoteSocket.setup(app);
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
-});
+    server.listen(3000, () => {
+      console.log('🚀 App listening on *:3000 🚀');
+    });
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
-});
+  })
