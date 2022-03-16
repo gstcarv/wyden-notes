@@ -14,11 +14,21 @@ body{
 input{
     margin-top: 30px;
     margin-bottom: 30px;
-    border: 2px solid rgb(59, 61, 66);
+    border: 1.5px solid rgb(59, 61, 66);
     border-radius: 20px;
     width: 500px;
     height: 30px;
     font-size: 20px;
+    padding-left: 5px;
+}
+
+button{
+    border-color: black;
+    border-radius: 20px;
+    border-width: 1.5px;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
     padding-left: 5px;
 }
 
@@ -28,8 +38,6 @@ div{
 }
 .container{ 
     display: flex;
-    
-    
 }
 
 .note li {
@@ -42,24 +50,27 @@ div{
     vertical-align: -webkit-baseline-middle;
     box-sizing: border-box;
     border-color: black;
-    border-width: 1px;
+    border-width: 1.5px;
     border-style: solid;
 }
-.One{
-    background-color: rgb(97, 105, 179);
+
+.One {
+    background-color: rgb(118, 125, 187);
+   
 }
 .Two{
-    background-color: rgb(218, 107, 107);
+    background-color: rgb(235, 162, 162);
+    
 }
-.Three{
-    background-color: rgb(195, 133, 236);
+.Three {
+    background-color: rgb(206, 159, 238);
 }
-.Four{
-    background-color: rgb(168, 230, 106);
+.Four {
+    background-color: rgb(181, 236, 126);
 }
 .Five{
-    background-color: rgb(235, 125, 229);
+    background-color: rgb(236, 141, 232);
 }
 .Six{
-    background-color: rgb(189, 253, 189);
+    background-color: rgb(160, 229, 165);
 }
