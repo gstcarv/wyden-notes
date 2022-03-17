@@ -1,13 +1,16 @@
+* {
+    font-family: Inter, sans-serif;
+}
 
 body{
-    background-color: rgb(238, 214, 210);
+    background-color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 1em;
     line-height: 1em;
     width: 100%;
     height: 100%;
-    margin: 0;
+    
     padding: 0;
 }
 
@@ -32,45 +35,65 @@ button{
     padding-left: 5px;
 }
 
-div{
-    display: contents;
-    justify-content: space-between;
-}
 .container{ 
-    display: flex;
+    /* display: flex; */
+    column-count: 4;
+    padding: 10px;
 }
 
-.note li {
-    width: 300px;
-    height: 400px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+.container .note {
+    margin: 5px;
+    /* flex-wrap: wrap; */
     padding: initial;
-    display: inline-block;
-    vertical-align: -webkit-baseline-middle;
     box-sizing: border-box;
-    border-color: black;
-    border-width: 1.5px;
-    border-style: solid;
+    border-radius: 50px;
+    break-inside: avoid-column;
+}
+
+ .write-note {
+    background-color: #e4e4e4;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    
+}
+
+.write-note i {
+    font-size: 50px;
+    color: #adadad;
+}
+
+.write-note span {
+    margin-top: 12px;
+    color: #adadad;
+    padding: 0 35px;
+    font-size: 15px;
 }
 
 .One {
     background-color: rgb(118, 125, 187);
-   
+    height: 300px;
 }
 .Two{
     background-color: rgb(235, 162, 162);
-    
+    height: 420px;
 }
 .Three {
     background-color: rgb(206, 159, 238);
+    height: 330px;
 }
 .Four {
     background-color: rgb(181, 236, 126);
+    height: 250px;
 }
 .Five{
     background-color: rgb(236, 141, 232);
+    height: 400px;
 }
 .Six{
     background-color: rgb(160, 229, 165);
+    height: 210px;
 }
