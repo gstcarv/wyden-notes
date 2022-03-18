@@ -75,7 +75,7 @@ button{
 
 .One {
     background-color: rgb(118, 125, 187);
-    height: 300px;
+    height: 450px;
 }
 .Two{
     background-color: rgb(235, 162, 162);
@@ -91,9 +91,21 @@ button{
 }
 .Five{
     background-color: rgb(236, 141, 232);
-    height: 400px;
+    height: 350px;
 }
 .Six{
     background-color: rgb(160, 229, 165);
     height: 210px;
+}
+.Seven{
+    background-color: rgb(238, 198, 138);
+    height: 210px;
+}
+.Eight{
+    background-color: rgb(138, 185, 238);
+    height: 280px;
+}
+.Nine{
+    background-color: rgb(238, 134, 174);
+    height: 280px;
 }
