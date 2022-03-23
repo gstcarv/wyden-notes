@@ -23,7 +23,9 @@ const NoteSocket = {
         return server;
     },
 
-    onUserConnected: (socket) => {},
+    onUserConnected: async (socket) => {
+        socket.emit("all_messages", await NoteService.getAll());
+    },
 
     onNoteReceived: async (message) => {
         await NoteService.saveNote({ message });

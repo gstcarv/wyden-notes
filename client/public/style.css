@@ -16,12 +16,16 @@ body {
     margin-bottom: 20px;
     padding: initial;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 10px;
     break-inside: avoid-column;
     position: relative;
     overflow: hidden;
     box-shadow: 0px 2px 6px -2px rgba(0,0,0,0.53);
     margin-bottom: 1rem;
+    padding: 5px 20px;
+    word-break: break-all;
+    text-align: left;
+    min-height: 120px;
 }
 
 .note-field {
@@ -72,6 +76,7 @@ body {
     align-items: center;
     flex-direction: column;
     z-index: 9999;
+    text-align: center;
 }
 
  .write-note {
