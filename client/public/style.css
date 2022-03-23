@@ -1,64 +1,87 @@
 * {
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif !important;
 }
 
-body{
+body {
     background-color: #fff;
-    font-family: Arial, sans-serif;
     text-align: center;
-    font-size: 1em;
-    line-height: 1em;
-    width: 100%;
-    height: 100%;
-    
-    padding: 0;
+    margin: 30px 10%;
 }
 
-input{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 1.5px solid rgb(59, 61, 66);
-    border-radius: 20px;
-    width: 500px;
-    height: 30px;
-    font-size: 20px;
-    padding-left: 5px;
-}
-
-button{
-    border-color: black;
-    border-radius: 20px;
-    border-width: 1.5px;
-    width: 80px;
-    height: 30px;
-    font-size: 15px;
-    padding-left: 5px;
-}
-
-.container{ 
-    /* display: flex; */
+.container { 
     column-count: 4;
-    padding: 10px;
 }
 
 .container .note {
-    margin: 5px;
-    /* flex-wrap: wrap; */
+    margin-bottom: 20px;
     padding: initial;
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 20px;
     break-inside: avoid-column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px -2px rgba(0,0,0,0.53);
+    margin-bottom: 1rem;
+}
+
+.note-field {
+    width: 90%;
+    height: 80%;
+    border: none;
+    display: block;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    resize: none;
+}
+
+.btn-send-message {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    color: #fff;
+    background-color: #60c09b;
+    padding: 5px 20px;
+    box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.53);
+    border-radius: 3px;
+    transition: background-color .1s;
+}
+
+.btn-send-message:hover {
+    background-color: #469174;
+}
+
+.note-field::placeholder {
+    color: #e4e4e4;
+}
+
+.click-to-write {
+    background-color: #e4e4e4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
 }
 
  .write-note {
-    background-color: #e4e4e4;
-    height: 300px;
+    background-color: #fff;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     flex-direction: column;
-    
 }
 
 .write-note i {
