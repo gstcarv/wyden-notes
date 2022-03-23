@@ -17,7 +17,10 @@ const NoteSocket = {
 
             NoteSocket.onUserConnected(socket);
 
-            socket.on("note", NoteSocket.onNoteReceived);
+            socket.on("note", async (message) => {
+                const note = await NoteSocket.onNoteReceived(message);
+                io.emit("note", note);
+            });
         });
 
         return server;
@@ -27,9 +30,7 @@ const NoteSocket = {
         socket.emit("all_messages", await NoteService.getAll());
     },
 
-    onNoteReceived: async (message) => {
-        await NoteService.saveNote({ message });
-    },
+    onNoteReceived: async (message) => await NoteService.saveNote({ message }),
 };
 
 module.exports = NoteSocket;

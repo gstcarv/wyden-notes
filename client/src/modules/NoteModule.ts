@@ -10,6 +10,12 @@ export const NoteModule = {
             $(".sent-notes").html(data.reverse().map(NoteUtils.createNoteElement) as any);
         });
 
+        socket.on("note", (data: NoteMessage) => {
+            console.log(data);
+
+            $(".sent-notes").prepend(NoteUtils.createNoteElement(data));
+        });
+
         $(".btn-send-message").on("click", (e) => {
             const noteField = $(".note-field");
 
@@ -17,10 +23,6 @@ export const NoteModule = {
 
             noteMessage = noteMessage.trim();
             noteMessage = noteMessage.replace("[\uFEFF-\uFFFF]", "");
-
-            if (!noteMessage) {
-                alert();
-            }
 
             if (noteMessage) {
                 NoteSocketClient.sendNote(noteMessage.toString());
