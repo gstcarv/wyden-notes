@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack serve"
+        "start": "webpack serve",
+        "tunnel": "lt --port 8085 --subdomain notes-fe"
     },
     "repository": {
         "type": "git",

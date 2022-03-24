@@ -8,7 +8,7 @@ body {
     margin: 30px 10%;
 }
 
-.container { 
+.container {
     column-count: 4;
 }
 
@@ -20,7 +20,7 @@ body {
     break-inside: avoid-column;
     position: relative;
     overflow: hidden;
-    box-shadow: 0px 2px 6px -2px rgba(0,0,0,0.53);
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.53);
     margin-bottom: 1rem;
     padding: 5px 20px;
     word-break: break-all;
@@ -53,7 +53,7 @@ body {
     color: #fff;
     background-color: #60c09b;
     padding: 5px 20px;
-    box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.53);
+    box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.53);
     border-radius: 3px;
     transition: background-color .1s;
 }
@@ -79,7 +79,7 @@ body {
     text-align: center;
 }
 
- .write-note {
+.write-note {
     background-color: #fff;
     height: 200px;
     display: flex;
@@ -105,35 +105,50 @@ body {
     background-color: rgb(118, 125, 187);
     height: 450px;
 }
-.Two{
+
+.Two {
     background-color: rgb(235, 162, 162);
     height: 420px;
 }
+
 .Three {
     background-color: rgb(206, 159, 238);
     height: 330px;
 }
+
 .Four {
     background-color: rgb(181, 236, 126);
     height: 250px;
 }
-.Five{
+
+.Five {
     background-color: rgb(236, 141, 232);
     height: 350px;
 }
-.Six{
+
+.Six {
     background-color: rgb(160, 229, 165);
     height: 210px;
 }
-.Seven{
+
+.Seven {
     background-color: rgb(238, 198, 138);
     height: 210px;
 }
-.Eight{
+
+.Eight {
     background-color: rgb(138, 185, 238);
     height: 280px;
 }
-.Nine{
+
+.Nine {
     background-color: rgb(238, 134, 174);
     height: 280px;
+}
+
+
+@media screen and (max-width: 575px) {
+    .container {
+        column-count: 1;
+    }
 }

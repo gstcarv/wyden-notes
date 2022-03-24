@@ -8,7 +8,7 @@ const app = express();
 
 mongoose.connect(config.DATABASE.URL + config.DATABASE.NAME).then(() => {
     app.get("/", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "..", "index.html"));
+        res.redirect('https://notes-fe.loca.lt');
     });
 
     const server = NoteSocket.setup(app);

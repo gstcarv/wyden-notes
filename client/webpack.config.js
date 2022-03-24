@@ -22,6 +22,8 @@ module.exports = {
     },
     devServer: {
         port: 8085,
+        compress: true,
+        allowedHosts: "all"
     },
     plugins: [
         new HtmlWebpackPlugin({

@@ -1,3 +1,3 @@
 import io from "socket.io-client";
 
-export default io("ws://localhost:3000");
+export default io("https://notes.loca.lt");
