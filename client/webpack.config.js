@@ -34,7 +34,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",
-            favicon: "./public/notepad.ico",
+            favicon: "./public/favicon.ico",
         }),
     ],
     optimization: {
