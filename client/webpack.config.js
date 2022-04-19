@@ -3,7 +3,6 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-    mode: "development",
     entry: "./src/app.ts",
     module: {
         rules: [
