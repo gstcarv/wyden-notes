@@ -13,7 +13,7 @@ const NoteSocket = {
         });
 
         io.on("connection", (socket) => {
-            console.log("a user connected");
+            console.log("User Connected: " + socket.id);
 
             NoteSocket.onUserConnected(socket);
 

@@ -6,10 +6,8 @@ const config = require("./src/config");
 
 const app = express();
 
-mongoose.connect(config.DATABASE.URL + config.DATABASE.NAME).then(() => {
-    app.get("/", (req, res) => {
-        res.redirect('https://notes-fe.loca.lt');
-    });
+mongoose.connect(config.DATABASE.getConnectionString()).then(() => {
+    app.use(express.static("public"));
 
     const server = NoteSocket.setup(app);
 

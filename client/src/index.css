@@ -28,6 +28,10 @@ body {
     min-height: 120px;
 }
 
+.sent-notes {
+    min-height: 100vh;
+}
+
 .note-field {
     width: 90%;
     height: 80%;

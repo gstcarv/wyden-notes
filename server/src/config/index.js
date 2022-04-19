@@ -1,7 +1,15 @@
-module.exports = {
-    PORT: 3000,
+require("dotenv").config();
+
+const config = {
+    PORT: process.env.PORT || null,
     DATABASE: {
-        URL: 'mongodb+srv://admin:gaaFrP9Zcnq2OhDm@cluster0.bvgcp.mongodb.net/',
-        NAME: 'wyden_notes_db'
-    }
-}
+        URL: process.env.DB_URL,
+        NAME: process.env.DB_NAME,
+        USER: process.env.DB_USER,
+        PASSWORD: process.env.DB_PASSWORD,
+
+        getConnectionString: () => `mongodb+srv://${config.DATABASE.USER}:${config.DATABASE.PASSWORD}@${config.DATABASE.URL}/${config.DATABASE.NAME}?retryWrites=true&w=majority`,
+    },
+};
+
+module.exports = config;

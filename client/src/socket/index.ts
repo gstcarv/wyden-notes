@@ -1,3 +1,3 @@
 import io from "socket.io-client";
 
-export default io("https://notes.loca.lt");
+export default io(process.env.NODE_ENV === "development" ? "http://localhost:3000" : "PROD_URL");

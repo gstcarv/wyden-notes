@@ -32,7 +32,7 @@ const NoteService = {
 
         const random = Math.floor(Math.random() * availableColors.length - 1);
 
-        const color = availableColors[random];
+        const color = availableColors[random] || "#f1c40f";
 
         const note = await NoteSchema.create({ message, color });
 
